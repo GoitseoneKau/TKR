@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--The meta data of the application-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--The title of the forms-->
+  <title>Afternoon Class Application Forms</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!--Thuto normal style sheet-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!--Style sheets-->
+  <style>
+    body {
+      /*background-color: rgba(0, 0, 0, 0.13);*/
+      background: url("images/books.jpg") center center/cover no-repeat fixed;
+
+    }
+
+    div.container.p-5 {
+      background-color: rgba(192, 180, 90, 0.4);
+
+    }
+
+    .bg-col-op5 {
+      background-color: rgba(255, 255, 255, 0.87);
+      /*dirty gold*/
+      border-radius: 5px;
+    }
+
+    .form-error {
+      color: red;
+    }
+
+    .input-error {
+      box-shadow: 0 0 15px red;
+    }
+
+    .form-success {
+      color: green;
+    }
+
+
+
+    .form-check-label {
+      color: black;
+      font-weight: bolder;
+    }
+
+    
+  </style>
+
+</head>
+
+<body>
+ 
+<!--HEADER ENDS HERE-->
+  <div class="row bg-beige justify-content-center">
+    
+      <h1 class="hd  p-4">Afternoon Class Application</h1>
+    
+  </div>
+	<div class="container p-5 faded ">
+    <div class="container p-5 ">
+
+    <div class="row justify-content-center bg-col-op5 ">
+      <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-6">
+        <form action="fetch.php" method="POST" class="form-horizontal form-center">
+          <h4  class="text-center p-3">Details :</h4>
+          <div class="form-group">
+            <label class="control-label">Name: </label>
+            <input type="text" class="form-control" id="applic-f_name" name="fname" placeholder="e.g: Musa">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Surname: </label>
+            <input type="text" class="form-control" id="applic-l_name" name="lname" placeholder="e.g: Mashele">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Country: </label>
+            <input type="text" class="form-control" id="applic-country" name="country" placeholder="e.g: South Africa">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Province: </label>
+            <input type="text" class="form-control" id="applic-prov" name="province" placeholder="e.g: Gauteng">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">City: </label>
+            <input type="text" class="form-control" id="applic-cit" name="city" placeholder="e.g: Pretoria">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Physical Address: </label>
+            <input type="text" class="form-control" id="applic-pAdd" name="Physical"
+              placeholder="e.g: 878 block L Soshanguve">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Code: </label>
+            <input type="text" class="form-control" id="applic-cod" name="code" placeholder="e.g: 0152">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Email: </label>
+            <input type="text" class="form-control" id="applic-mail" name="email"
+              placeholder="e.g: Musa.Mash01@gmail.com 'Optional...'">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Home Tel Number: </label>
+            <input type="text" class="form-control" id="applic-Tel" name="homeTel"
+              placeholder="e.g: 012-999-3634 'Optional...'">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Phone Number: </label>
+            <input type="text" class="form-control" id="applic-phone_num" name="phoneN" placeholder="e.g: 079-586-4726">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Gender: </label>
+
+            <label class="form-check-label">
+              <input class="form-check-inline" checked="checked" type="radio" id="inlineRadio1"
+                name="inlineRadioOptions" value="Male">Male
+            </label>
+
+            <label class="form-check-label">
+              <input class="form-check-inline" type="radio" id="inlineRadio1" name="inlineRadioOptions"
+                value="Female">Female
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Date of Birth: </label>
+            <input type="date" class="form-control" id="applic-DOB" name="date">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Identity Number: </label>
+            <input type="text" class="form-control" id="ID" name="ID">
+
+          </div>
+          <div class="form-group">
+            <label for="formControlSelect1" class="control-label">Age: </label>
+            <select class="form-control" name="formControlSelect1" id="some_select"></select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Do you suffer from medical condition:
+              <br>
+              <label class="form-check-label">
+                <input class="form-check-inline" checked="checked" type="radio" id="inlineRadioB1"
+                  name="inlineRadioBOptions" value="yes">Yes
+              </label>
+              <br>
+              <label class="form-check-label">
+                <input class="form-check-inline" type="radio" id="inlineRadioB1" name="inlineRadioBOptions"
+                  value="no">No
+              </label>
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="control-label">If yes, please state your condition: </label>
+            <input type="text" class="form-control" id="applic-medCon" name="condition"
+              placeholder="e.g: Short Eyesight">
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Parent/Guardian Surname: </label>
+            <input type="text" class="form-control" id="pname" name="pname" placeholder="e.g: Chauke">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Parent/Guardian Name: </label>
+            <input type="text" class="form-control" id="psurname" name="psurname" placeholder="e.g: Dudu Tshepiso">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Title: </label>
+            <select id="ptitle" name="ptitle" class="form-control">
+              <option disabled>Choose the Guardian/Parent Title</option>
+              <option value="Dr" selected="selected">Dr</option>
+              <option value="Mr">Mr</option>
+              <option value="Miss">Miss</option>
+              <option value="Mrs">Mrs</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <p>
+                  <input class="form-check-inline" type="checkbox" id="inlineCheckBox" name="inlineCheckBox"
+                    value="agree">
+                  I Parent/Guardian of the student stated in this application agree that he/she can attend the afternoon
+                  extra classes program and i take a full responsibility of everything that will be needed on behalf of
+                  my child,
+                  making sure that he/she attends the classes.
+                  I agree that it is in my best interest to work and support you to help my child in improving
+                  academically.</p>
+              </label>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label class="control-label">Parent Initials: </label>
+            <input type="text" disabled class="form-control" id="applic-init" name="initials" placeholder="e.g: P.M">
+
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit" name="submit">Submit</button>
+            <button class="btn btn-danger" onclick="document.location.replace('index.html');">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron jumbotron-fluid bg-beige  m-0">
+    <section class="col-sm-12 copy">
+      <a class="float-right" href="#home"><i class="fas fa-arrow-alt-circle-up"></i></a>
+      <p class="ft-copy text-center">&copy; Goitseone Kau-Cosmic vision 2019.
+    </section>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!--Scripts-->
+  <script>
+    $(document).ready(function () {
+
+      $("#psurname").change(function () {
+        if ($("#pname").val() != "") {
+          $("#applic-init").val($("#psurname").val().substr(0, 1) + "." + $("#pname").val().substr(0, 1));
+        }
+      });
+
+      $("form").submit(function (event) {
+        event.preventDefault();
+        let name = $("#applic-f_name").val();
+        let surname = $("#applic-l_name").val();
+        let country = $("#applic-country").val();
+        let province = $("#applic-prov").val();
+        let city = $("#applic-cit").val();
+        let gender = $("#inlineRadio1:checked").val();
+        let physicalAddress = $("#applic-pAdd").val();
+        let code = $("#applic-cod").val();
+        let age = $("#some_select").val();
+        let email = $("#applic-mail").val();
+        let telephoneN = $("#applic-Tel").val();
+        let phoneN = $("#applic-phone_num").val();
+        let dateOfBirth = $("#applic-DOB").val();
+        let id = $("#ID").val();
+        let medCheck = $("#inlineRadioB1:checked").val();
+        let medCondition = $("#applic-medCon").val();
+        let pname = $("#pname").val();
+        let psurname = $("#psurname").val();
+        let ptitle = $("#ptitle").val();
+        let initials = $("#applic-init").val();
+        let check = $("#inlineCheckBox:checked").val();
+
+        $.post("class_post.php", {
+          name: name,
+          surname: surname,
+          country: country,
+          province: province,
+          city: city,
+          gender: gender,
+          physicalAddress: physicalAddress,
+          code: code,
+          age: age,
+          email: email,
+          telephoneN: telephoneN,
+          phoneN: phoneN,
+          dateOfBirth: dateOfBirth,
+          id: id,
+          medCheck: medCheck,
+          medCondition: medCondition,
+          parent_name: pname,
+          parent_surname: psurname,
+          parent_title: ptitle,
+          check: check,
+          initials: initials
+        }, function (data) {
+
+          $("#applic-f_name, #applic-l_name, #applic-country, #applic-prov, #applic-cit, #applic-pAdd,#applic-cod, #some_select, #applic-mail, #applic-Tel, #applic-phone_num, #applic-DOB, #applic-medCon, #pname, #psurname, #applic-init ,#inlineCheckBox")
+            .removeClass("input-error");
+
+          //remove instances of errors
+          $(".form-error").remove();
+
+
+          if (!data.nameErr == "") {
+            $("#applic-f_name").addClass("input-error")
+              .after(data.nameErr);
+          }
+
+          if (!data.surnameErr == "") {
+            $("#applic-l_name").addClass("input-error")
+              .after(data.surnameErr);
+          }
+
+          if (!data.countryErr == "") {
+            $("#applic-country").addClass("input-error")
+              .after(data.countryErr);
+          }
+
+          if (!data.provinceErr == "") {
+            $("#applic-prov").addClass("input-error")
+              .after(data.provinceErr);
+          }
+
+          if (!data.cityErr == "") {
+            $("#applic-cit").addClass("input-error")
+              .after(data.cityErr);
+          }
+
+          if (!data.physicalAddErr == "") {
+            $("#applic-pAdd").addClass("input-error")
+              .after(data.physicalAddErr);
+          }
+
+          if (!data.codeErr == "") {
+            $("#applic-cod").addClass("input-error")
+              .after(data.codeErr);
+          }
+
+          if (!data.ageErr == "") {
+            $("#some_select").addClass("input-error")
+              .after(data.ageErr);
+          }
+
+          if (!data.emailErr == "") {
+            $("#applic-mail").addClass("input-error")
+              .after(data.emailErr);
+          }
+
+          if (!data.telephoneErr == "") {
+            $("#applic-Tel").addClass("input-error")
+              .after(data.telephoneErr);
+          }
+
+          if (!data.phoneErr == "") {
+            $("#applic-phone_num").addClass("input-error")
+              .after(data.phoneErr);
+          }
+
+          if (!data.dobErr == "") {
+            $("#applic-DOB").addClass("input-error")
+              .after(data.dobErr);
+          }
+
+          if (!data.idErr == "") {
+            $("#ID").addClass("input-error")
+              .after(data.idErr);
+          }
+
+          if (!data.parent_nameErr == "") {
+            $("#pname").addClass("input-error")
+              .after(data.parent_nameErr);
+          }
+
+          if (!data.parent_surnameErr == "") {
+            $("#psurname").addClass("input-error")
+              .after(data.parent_surnameErr);
+          }
+
+          if (!data.initialsErr == "") {
+            $("#applic-init").addClass("input-error")
+              .after(data.initialsErr);
+          }
+
+          if (!data.checkErr == "") {
+            $("#inlineCheckBox").addClass("input-error")
+              .after(data.checkErr);
+          }
+
+          if (!data.medConErr == "") {
+            $("#applic-medCon").addClass("input-error")
+              .after(data.medConErr);
+          }
+
+          if (!data.home == "") {
+            if (!data.success == "") {
+              $("button").toggleClass(".btn btn-success").text(data.success);
+            }
+            setTimeout(window.location.replace(data.home), 2 * 60 * 1000);
+          }
+
+
+        }, "json");
+
+      });
+
+      let select1;
+      select1 += '<option val ="0"> Please select your age </option>';
+      for (let i = 8; i <= 35; i++) {
+        select1 += '<option val =' + i + '>' + i + '</option>';
+        $('#some_select').html(select1);
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>

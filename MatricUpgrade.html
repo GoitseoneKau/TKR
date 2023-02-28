@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!--The meta data of the application-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!--The title of the forms-->
+	<title>Matric Upgrade/Rewrite Application Form</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="mobile">
+	<!--Thuto normal style sheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 <!--fontawesome sheets-->
+	 <link href="fontawesome/css/all.css" rel="stylesheet">
+	 <script defer src="fontawesome/js/all.js"></script> 
+
+	<!--Style sheets-->
+	<style>
+		.form-error {
+			color: red;
+		}
+
+		.input-error {
+			box-shadow: 0 0 15px red;
+		}
+
+		.form-success {
+			color: green;
+		}
+
+		.container {
+			font: Times Roman 5px;
+			font-weight:normal;
+		}
+		body {
+      /*background-color: rgba(0, 0, 0, 0.13);*/
+	  background-color: rgba(255, 255, 255, 0.87);
+      background: url("images/books.jpg") center center/cover no-repeat fixed;
+	  
+    }
+
+    div.container.p-5 {
+      background-color: rgba(192, 180, 90, 0.4);
+
+    }
+	.bg-col-op5 {
+      background-color: rgba(255, 255, 255, 0.87);
+      /*dirty gold*/
+      border-radius: 5px;
+    }
+		
+		
+	</style>
+
+</head>
+
+<body>
+	
+		<div class="bg-beige">
+			<div class="row justify-content-center">
+				<h1 class="hd p-4">Matric (Upgrade) Application</h1>
+			</div>
+		</div>
+
+
+	<div class="container p-5 faded ">
+
+			<div class="row justify-content-center bg-col-op5">
+				
+				<div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-6">
+					<h4  class="text-center p-3">Details :</h4>
+					<form id="matric" action="upgrade.php" method="POST" class="form-horizontal form-center">
+						<div class="form-group">
+							<label>Surname: </label>
+							<input type="text" class="form-control" id="s_name" name="surname"
+								placeholder="e.g: Maluleke">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Firstname: </label>
+							<input type="text" class="form-control" id="f_name" name="fname" placeholder="e.g: Jane">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Date Of Birth: </label>
+							<input type="date" class="form-control" id="DateOfBirth" name="dob">
+						</div>
+						<div class="form-group">
+							<label class="form-control-label">Gender: </label>
+
+							<label class="form-check-label">
+								<input class="form-check-inline" type="radio" id="inlineRadio1" checked="checked"
+									name="inlineRadioOptions" value="Male">Male
+							</label>
+							<label class="form-check-label">
+								<input class="form-check-inline" type="radio" id="inlineRadio1"
+									name="inlineRadioOptions" value="Female">Female
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="control-label">ID Number: </label>
+							<input type="text" class="form-control" id="ID" name="IDn" placeholder="e.g: 9416450499089">
+						</div>
+						<div class="form-group">
+							<label class="form-control-label">Contact Number: </label>
+							<input type="text" class="form-control" id="contact_num" name="contNumber"
+								placeholder="e.g: 079-586-4726">
+						</div>
+						<!-- THE UPLOAD DOCUMENT SECTION WILL BE INSERTED HERE BEFORE PARENT INFORMATION -->
+
+						<div class="form-group">
+							<label class="control-label">Parent/Guardian surname: </label>
+							<input type="text" class="form-control" id="p_surname" name="parentGuardianSurname"
+								placeholder="e.g: Maluleke">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Parent/Guardian first name: </label>
+							<input type="text" class="form-control" id="p_name" name="ParentGuardianFname"
+								placeholder="e.g: Selina'">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Parent/Guardian Contact Number: </label>
+							<input type="text" class="form-control" id="p_number" name="ParentGuardianPhone"
+								placeholder="e.g: 079-999-3634">
+						</div>
+						<div class="container m-0 col-12">
+							<div class="form-group">
+							<label for="formControlSelect1" class="font-weight-bolder ml-n3">Modules/Subjects to Upgrade: </label>
+
+							<!--first row-->
+							<div class="row w-responsive   p-2">
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Accounting">Accounting</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Afrikaans">Afrikaans</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]"
+												value="Agricultural Sciences">Agricultural Sciences</label>
+									</div>
+								</div>
+							</div>
+							<!--first row end-->
+
+							<!--second row-->
+							<div class="row w-responsive  p-2">
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Business Studies">Business
+											Studies</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Economics">Economics</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]"
+												value="English First Additional Language">English First Additional
+											Language</label>
+									</div>
+								</div>
+							</div>
+							<!--second row end-->
+
+							<!--third row-->
+							<div class="row w-responsive  p-2">
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="English Home Language">English
+											Home Language</label>
+
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Geography">Geography</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="History">History</label>
+									</div>
+								</div>
+							</div>
+							<!--third row end-->
+
+							<!--fourth row-->
+							<div class="row w-responsive  p-2">
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Life Science">Life
+											Science</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Mathematics">Mathematics</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]"
+												value="Mathematical Literacy">Mathematical Literacy</label>
+									</div>
+								</div>
+							</div>
+							<!--fourth row end-->
+
+							<!--fifth row-->
+							<div class="row w-responsive  p-2">
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Physical Science">Physical
+											Science</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Setswana">Setswana</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="input-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Technical Mathematics">Technical
+											Mathematics</label>
+									</div>
+								</div>
+								<div class="col-lg-4 col-xs-12 col-sm-12 col-md-4">
+									<div class="input-group">
+										<label class="control-label"><input type="checkbox" class="form-check-input"
+												id="sub_select" name="subject[]" value="Technical Sciences">Technical
+											Science</label>
+									</div>
+								</div>
+							</div>
+							<!--fifth row end-->
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label font-weight-bolder">Upload your ID photo: </label>
+							<input type="file" class="form-control-file" id="id_photo" name="id_photo"
+								placeholder=".jpeg,.jpg,.png" multiple>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label font-weight-bolder">Upload your Previous Results(If Upgrading): </label>
+							<input type="file" class="form-control-file" id="previous_results" name="previous_results"
+								placeholder=".jpeg,.jpg,.png" multiple>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label font-weight-bolder">Upload your Certified ID copy: </label>
+							<input type="file" class="form-control-file" id="certified_id_copy" name="certified_id_copy"
+								placeholder=".jpeg,.jpg,.png" multiple>
+						</div>
+
+						<div class="form-group">
+							<label><strong>DECLARATION BY STUDENT</strong></label>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label">
+									<p>
+										<input class="form-check-inline" type="checkbox" id="student_check"
+											name="inlineCheckBox" value="Agreed">I the above Applicant here by promise
+										to abide by the conditions set by TKR & HCS and agree to attend
+										all classes and do class tasks given to me, i confirm my registration
+										details and desist from any conduct that may spoil the good name of TKR & HCS
+									</p>
+								</label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label><strong>DECLARATION BY PARENT/LEGAL GUARDIAN</strong></label>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label">
+									<p>
+										<input class="form-check-inline" type="checkbox" id="parent_check"
+											name="inlineCheckBox" value="Agreed">I the parent/guardian of the above
+										applicant hereby give him/her authority to attend TKR & HCS classes
+										and undertake to pay all registration fee before he/she can be accepted and
+										further guarentee that
+										i will pay amount payable per subject atleast a month in advance. I understand
+										and agree that my
+										child/ward will not be allowed into a class, given time table for exam or
+										allowed to seat for
+										exams if fees are not up-to-date. I am aware that interest will be added to
+										outstanding fees at 10% per
+										month. I further give TKR & HCS permission to take legal steps recover any money
+										that may be unpaid
+										three months after due date</p>
+								</label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<button class="btn btn-primary" type="submit">Submit</button>
+							<button class="btn btn-danger" onclick="document.location.replace('index.html');" >Cancel</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- FOOTER STARTS HERE-->
+		<div class="jumbotron jumbotron-fluid bg-beige  m-0">
+			<section class="col-sm-12 copy">
+				<a class="float-right" href="#home"><i class="fas fa-arrow-alt-circle-up"></i></a>
+				<p class="ft-copy text-center">&copy; Goitseone Kau-Cosmic vision 2019.
+			</section>
+		</div>
+
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--Scripts-->
+<script>
+	$(document).ready(function () {
+
+		$("form#matric").submit(function (event) {
+			event.preventDefault();
+
+			let name = $("#f_name").val();
+			let surname = $("#s_name").val();
+			let gender = $("input[name='inlineRadioOptions']").val();
+			let ID = $("#ID").val();
+			let DOB = $("#DateOfBirth").val();
+			let contact = $("#contact_num").val();
+			let parent_name = $("#p_name").val();
+			let parent_surname = $("#p_surname").val();
+			let parent_number = $("#p_number").val();
+
+			let subjects = [];
+			$("#sub_select:checked").each(function (k) {
+				subjects[k] = $(this).val();
+			});
+
+			let id_photo = $("input[name='id_photo']").prop('files')[0];
+			let previous_results = $("input[name='previous_results']").prop('files')[0];
+			let certified_id_copy = $("input[name='certified_id_copy']").prop('files')[0];
+
+			let student_check = $("#student_check:checked").length;
+			let guardian_check = $("#parent_check:checked").length;
+
+			let form_data = new FormData();
+			form_data.append('name', name);
+			form_data.append('surname', surname);
+			form_data.append('gender', gender);
+			form_data.append('ID', ID);
+			form_data.append('DOB', DOB);
+			form_data.append('contact', contact);
+			form_data.append('p_name', parent_name);
+			form_data.append('p_sname', parent_surname);
+			form_data.append('p_num', parent_number);
+			form_data.append('sub', subjects);
+			form_data.append('s_check', student_check);
+			form_data.append('g_check', guardian_check);
+			form_data.append('id_photo', id_photo);
+			form_data.append('results', previous_results);
+			form_data.append('id_copy', certified_id_copy);
+
+			$.ajax({
+				type: "POST",
+				url: "upgrade.php",
+				cache: false,
+				processData: false,
+				contentType: false,
+				data: form_data,
+				dataType: "json",
+				enctype: "multipart/form-data",
+				success: function (data) {
+
+					//remove error class
+					$("#f_name,#s_name,#ID,#DateOfBirth,#contact_num,#p_name,#p_surname,#p_number,#occ,#student_check,#parent_check,#id_photo,#previous_results,#certified_id_copy,label>input#sub_select")
+						.removeClass("input-error");
+
+					//remove instances of errors
+					$(".form-error").remove();
+					console.log(data);
+					if (!data.nameErr == "") {
+						$("#f_name").addClass("input-error").after(data.nameErr);
+					}
+
+					if (!data.surnameErr == "") {
+						$("#s_name").addClass("input-error")
+							.after(data.surnameErr);
+					}
+
+					if (!data.pnameErr == "") {
+						$("#p_name").addClass("input-error")
+							.after(data.pnameErr);
+					}
+
+					if (!data.psurnameErr == "") {
+						$("#p_surname").addClass("input-error")
+							.after(data.psurnameErr);
+					}
+
+					if (!data.idErr == "") {
+						$("#ID").addClass("input-error")
+							.after(data.idErr);
+					}
+
+					if (!data.dobErr == "") {
+						$("#DateOfBirth").addClass("input-error")
+							.after(data.dobErr);
+					}
+
+					if (!data.phone_noErr == "") {
+						$("#contact_num").addClass("input-error")
+							.after(data.phone_noErr);
+					}
+
+					if (!data.guardian_numErr == "") {
+						$("#p_number").addClass("input-error")
+							.after(data.guardian_numErr);
+					}
+
+
+					if (!data.s_checkErr == "") {
+						$("#student_check").addClass("input-error")
+							.after(data.s_checkErr);
+					}
+
+					if (!data.g_checkErr == "") {
+						$("#parent_check").addClass("input-error")
+							.after(data.g_checkErr);
+					}
+
+					if (!data.id_photoErr == "") {
+
+						$("#id_photo").addClass("input-error")
+							.after(data.id_photoErr);
+					}
+
+					if (!data.resultsErr == "") {
+						$("#previous_results").addClass("input-error")
+							.after(data.resultsErr);
+					}
+
+					if (!data.id_copyErr == "") {
+						$("#certified_id_copy").addClass("input-error")
+							.after(data.id_copyErr);
+					}
+
+					if (!data.subjectErr == "") {
+						$("label>input#sub_select").addClass("input-error")
+							.after($(data.subjectErr));
+					}
+
+
+					if (!data.home == "") {
+						window.location.replace(data.home);
+					}
+				}
+			});
+
+		});
+
+		//end of document	
+	});
+</script>
+
+</html>

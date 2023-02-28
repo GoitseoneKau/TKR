@@ -1,0 +1,468 @@
+<html>
+<head>
+
+	<!--The meta data of the application-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!--The title of the forms-->
+	<title>Editor</title>
+		
+	<!-- CSS styles -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="mobile">
+	<link href="css/fontawesome/css/all.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/fontawesome/css/all.min.css" rel="stylesheet" type="text/css" media="mobile">
+	<link href="css/fontawesome/css/brands.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/fontawesome/css/brands.min.css" rel="stylesheet" type="text/css" media="mobile">
+	<link href="css/fontawesome/css/fontawesome.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/fontawesome/css/fontawesome.min.css" rel="stylesheet" type="text/css" media="mobile">
+	<link href="css/fontawesome/css/regular.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/fontawesome/css/regular.min.css" rel="stylesheet" type="text/css" media="mobile">
+	<link href="css/style.css" rel="stylesheet" />
+    
+	<!--Style sheets-->
+	<style>
+		  body{
+			 background-color: gray;
+		  }
+		  
+		  .form-error{
+			  color:red;
+		  }
+
+		  .input-error{
+			  box-shadow: 0 0 15px red;
+		  }
+
+		  .form-success{
+			  color:green;
+		  }
+
+		#edit_panel{height:relative;border:1px black solid;}
+
+		@media(max-width:750px){
+			#page{
+				height: 1200px;
+			}
+		}
+
+		@media(max-width:970px){
+			#page{
+				height: 1200px;
+			}
+		}
+
+		@media(max-width:1170px){
+			#page{
+				height: 1200px;
+			}
+		}
+	</style>    
+</head>
+<body >
+<div class="row col-md-12">
+	<div class="container jumbotron"><h1 class="">Web Editor</h1></div>
+</div>
+<div class="row col-md-12" id="editor">
+	<div id="edit_panel" class="container">
+		<div class="row  col-sm-12 col-md-12 col-lg-12">
+			<div class="container"><button id="save" class="btn btn-danger justify-content-center">save</button></div>
+		</div>
+		
+		<div class="row  col-sm-12 col-md-12 col-lg-12">
+			<div class="container" ><label id="el_name"></label></div><br>
+		</div>
+		
+		<div class="row col-md-12">
+			<div class="container">
+				<div id="gallery" class="images carousel" data-ride="carousel" style="padding:30px;" >
+					<ul class="carousel-indicators">
+						
+					</ul>
+					<div class="carousel-inner">
+					
+					</div>
+					<a class="carousel-control-prev" href="#gallery" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					</a>
+					<a class="carousel-control-next" href="#gallery" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row col-md-12">
+			<div class="container">
+				<label class="control-label">choose new image</label>
+				<input type="file" id="image" placeholder="choose new image..." class="form-control-file"/>
+				<br>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="row col-md-12">
+	<div class="container" id="page">
+
+		 <!-- first section - Home -->
+		  <div id="home" class="home">
+			<div class="row">
+				<div class="container">
+					<div class="text-vcenter">
+					<!--the slide show-->
+						<div class="row">
+							<div class="container col-sm-12 col-md-12 col-lg-12">
+								<div id="live" class="carousel slide" data-ride="carousel">
+									<ul class="carousel-indicators">
+										<li data-target="#live" data-slide-to="0" class="active"></li>
+										<li data-target="#live" data-slide-to="1"></li>
+										<li data-target="#live" data-slide-to="2"></li>
+									</ul>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img class="d-block" src="images/thuto 5.jpg" alt="thuto5" id="1">
+											<div class="carousel-caption d-none d-sm-none d-md-block">
+												<h3>Home</h3>
+												<p>Home sweet home</p>
+											</div>
+										</div>
+										
+										<div class="carousel-item">
+											<img class="d-block" src="images/thuto7.jpg" alt="thuto7" id="2" >
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Thuto</h3>
+												<p>Thuto keya bana</p>
+											</div>
+										</div>
+										
+										<div class="carousel-item">
+											<img class="d-block" src="images/thuto9.jpg" alt="thuto9" id="3">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Estate</h3>
+												<p>I love the Estate</p>
+											</div>
+										</div>
+									</div>
+									<a class="carousel-control-prev" href="#live" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									</a>
+									<a class="carousel-control-next" href="#live" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									</a>
+								</div><!--/The end of slide show section-->
+		
+							  <br><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="container col-sm-12 col-md-12 col-lg-12">
+								  <h1>THUTO KEYA RONA</h1><br>
+								  <h2>Vision & Mission</h2>
+								  <h4 class="text-left ">Vision</h4>
+								  <div class="row">
+									<div class="container">
+										<div class="text-left has-animation animation-rtl" data-delay="1000">
+										<p class="">yviuedbvcobcbobeucbelwcbjbdecjebcbljdbhvgcyghlgyfxtdxyfughklnjbhj glhfyctyg;uhjnbkjb vhfctfyguhiklnb vgfyghjbkggjbvjgh bk;vcfgbbg</p>
+										</div>
+									</div>
+								  </div>
+								  <h4 class="text-left">Mission</h4>
+								  <div class="row">
+									  <div class="container">
+										<div class="text-left has-animation animation-rtl" data-delay="1000">
+										<p class="flex-sm-wrap">exrctvyubunikbhjvgcvbnmiuyvtcfhbnklnjbhvgchfxytufyiguoihjblhkvgigvhigytgiuv vutfyguvhug yutcfguojbvh yctfygiuo ih</p>
+										</div>
+									  </div>
+								  </div>
+								  
+								  <a href="#about" class="btn btn-default btn-lg btn-primary">Explore Our World!!!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		  <!-- /first section -->
+
+		  <!-- second section - About -->
+		  <div id="about" class="pad-section">
+		  <div class="container">
+			<div class="row">
+				<div class="container col-sm-4 col-md-4 col-lg-4">
+				  <img src="images/thuto3.png" width="100%" height="50%" alt="" />
+				</div>
+				<div class="container col-sm-8 col-sm-8 col-md-8 col-lg-8 text-center">
+				  <h1>About Us</h1><hr/>
+				  <p class="lead">
+						<p class="text text-justify">Thuto Keya Rona Tutoring And Projects was started in 2015, the organization provides after-school lessons, matric re-write and upgrade, access to government information and also relating to unemployment, health, arts and culture, Bana Pele and Batho Pele principles.</p>
+						
+						<p class="text text-justify">The After-School Program was established for the purpose of creating high-quality after-school programs outside of regular school hours. After-school programs are defined as programs that take place when school is not in session and provide educational enrichment and recreational activities for students in grades R-12 and have a parent involvement component. After-school programs provide students with academic enrichment opportunities, as well as additional activities designed to complement the Department of Basic Education’s academic programs. Services include tutoring and mentoring, homework help, academic enrichment (such as hands-on science or technology programs), community service opportunities, as well as music, arts, sports and cultural activities. At the same time, programs assist working parents by providing a safe environment for students. </p>
+						
+						<p class="text text-justify">Thuto keya rona has partnered with private colleges and institutions to offer the matric re-write and upgrade as well as skills development programmes. The arm of the partnership is to give access to quality education and also quality skills at an affordable prices.</p>
+				  </p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <!-- /second section -->
+
+		  <!-- third section - programmes/Services -->
+		  <div id="program" class="pad-section">
+			<div class="container">
+			  <h2 class="text-center">Our Programmes</h2> <hr />
+			  <div class="row text-center">
+			  <div class="row">
+				<div class="container align-content-center">
+					<div class="col-md-4 col-lg-4">
+					  <span class="fas fa-book" aria-hidden="true"> </span>
+					  <h4>Afternoon Class Program</h4>
+					  <p>
+						<ul  class="text-justify">
+							<li>
+							  This is a program developed to enhance the knowledge a student already knows or fails to understand from a formal structure within a class premises.
+							  Below are the modules offered in the program:
+							</li><br>
+							  <ol  class="text-justify">
+								<li>Science and Mathematics</li>
+								<li>Accounting</li>
+							  </ol>
+						</ul>
+							  <i><span class="fas fa-pencil-alt"></span><a href="AfternoonClassApplicactionForms.html" >APPLY!!!</a></i>  
+						</p>
+					</div>
+					<div class="col-md-4 col-lg-4">
+					  <span class="fas fa-leaf"> </span>
+					  <h4>Matric Upgrade Program</h4>
+					  <p>
+						<ul class="text-justify">
+						 <li>The program is to give an opportunity to students who would love to upgrade their matric and also giving a privilege to those who where disadvantaged/unable to do/complete their matric. Below are the modules offered:</li>
+							<ol  class="text-justify">
+							  <li></li>
+							  <li></li>
+							</ol>
+						</ul>
+						<span class="fas fa-pencil-alt"></span><i><a href="MatricUpgrade.html" >APPLY!!!</a></i> 
+					  </p>
+					</div>
+					<div class="col-md-4 col-lg-4">
+					  <span class="fas fa-book"> </span>
+					  <h4>Skills Development Program</h4>
+					  <p>
+						<ul class="text-justify">
+							<li>Skill development is a program invented to give practical skills to anyone who may or may not have previous academic skills or qualification for a relevant job requirement. The programs offered are: </li>
+							  <ol   class="text-justify">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							  </ol>
+						</ul>
+						<span class="fas fa-pencil-alt"></span><a href="SkillsApplicationForm.html" >APPLY!!!</a> 
+					  </p>
+					</div>
+					
+				</div>
+			  </div>
+			  <div class="row col-md-12 col-lg-12">
+					  <img src="images/thuto3.png" width="50%" height="50%" alt="" />
+				</div>
+				<div class="col-xs-12 col-md-12 col-lg-12">
+					<p>The are other programmes that you may be interested in below: <br><i><strong>click the text to see description</strong></i></p>
+					<p class="text-left">
+					  <h5 type="text" class="text text-left collapse-head" data-toggle="collapse" data-target="#div1"><span class="symbol"></span>Drug abuse</h5>
+						  <div id="div1" class="collapse">
+							<p class="text-justify">
+								To facilitate public education programs about dangers of drugs and substance abuse 
+								and create a warm environment to influence change for rehabilitated individuals.
+							</p>
+						  </div><br>
+					  <h5 type="text" class="text text-left collapse-head" data-toggle="collapse" data-target="#div2"><span class="symbol"></span>Arts and Culture</h5>
+						  <div id="div2" class="collapse">
+							<p class="text-justify">
+								Addressing poverty in vulnerable and under-privileged communities through music
+								Drama, Poetry, Group Dance and Art Craft to expose local talent of upcoming artist.                     
+							</p>
+						  </div><br>
+					  <h5 type="text" class="text text-left collapse-head" data-toggle="collapse" data-target="#div3"><span class="symbol"></span>Loktion Scamtho</h5>
+						  <div id="div3" class="collapse">
+							<p class=" text-justify">
+								The purpose is to create dialogue in the community to Focus on Strengthening partnerships. 
+							</p>
+						  </div><br>
+					  <h5 type="text" class="text text-left collapse-head" data-toggle="collapse" data-target="#div4"><span class="symbol"></span>Agricultural project</h5>
+						  <div id="div4" class="collapse">
+							<p class="text-justify">
+								Conducting youth dialogues, community-based on agriculture and open Social Investment Platforms
+								Life skills workshops
+								Establish a food garden
+								Soil maintenance
+								Growing crops
+								Chicken farming
+							</p>
+						  </div><br>
+					  <h5 type="text" class="text text-left collapse-head" data-toggle="collapse" data-target="#div5"><span class="symbol"></span>Schools  debate competition against HIV/ AIDS, Teenage pregnancy and substance abuse </h5>
+						  <div id="div5" class="collapse">
+							<p class="text-justify">
+								Recruit school health ambassadors to facilitate the program at schools (from Monday to Friday) 
+								Stakeholders will run all knock outs at schools halls and do the finals at State 
+								Theatre or City Hall. 
+								The schools that didn’t make it to the finals will do their /AIDS awareness road shows at their community center to keep them motivated.
+								Creating a Schools Arts competition against HIV/AIDS website and social network. 
+							</p>
+						  </div><br>
+					  <h5 type="text" class="text text-left collapse-head" data-toggle="collapse" data-target="#div6"><span class="symbol"></span>Enterprise development</h5>
+						  <div id="div6" class="collapse">
+							<p class="text-justify">
+								Involve young people into the road agency skills development fund for	Job creation and Skills development
+							</p>
+						  </div><br>
+					  <h5 type="text" class="text text-left collapse-head" data-toggle="collapse" data-target="#div7"><span class="symbol"></span>Youth Leadership Camp</h5>
+						  <div id="div7" class="collapse">
+							<p class="text-justify">
+									Youth participate in community programs feel empowered to contribute to positive change in their communities 
+									Youth inspire others to act 
+									Youth Demonstrate Leadership 
+									Skills  
+								  Youth model positive behaviour towards peers 
+								  Youth develop positive and sustained relationships with caring
+							</p>
+						  </div>
+					</p>
+				</div>
+			</div>
+		  </div>
+		  </div>
+		  <!-- /third section -->
+
+		  <!-- fourth section - News and Events -->
+		  <div id="news" class="pad-section">
+			
+			  <div class="row">
+				  <div class="container">
+					<h1 class="text-center">News & Events</h1>
+					<hr style="background:black;"/>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					  <div class="panel panel-default ">
+						<div class="panel-heading">
+						  <h2 class="panel-title">News</h2>
+						   </div>
+							<div class="panel-body lead">
+					   
+						  <!-- Nav tabs -->
+							  <ul class="nav nav-tabs" role="tablist">
+								<li class="nav-item">
+								  <a class="nav-link active" data-toggle="tab" href="#news1"><small>TKR News Update</small></a>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link" data-toggle="tab" href="#news2"><small>No News</small></a>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link" data-toggle="tab" href="#news3"><small>No News</small></a>
+								</li>
+							  </ul>
+
+							  <!-- Tab panes -->
+							  <div class="tab-content ">
+								<div id="news1" class="tab-pane active"><br>
+								<h3>TKR's new Website launch</h3>
+								<p style="font-size:10pt;">We are proud to announce that we have a website and now everyone can apply through it and read about us and what we offer.</p>
+								</div>
+								<div id="news2" class="tab-pane fade"><br>
+								  <h3>No News</h3>
+								  <p style="font-size:10pt;"></p>
+								</div>
+								<div id="news3" class="tab-pane fade"><br>
+								  <h3>No News</h3>
+								  <p style="font-size:10pt;"></p>
+								</div>
+							  </div>
+							</div>
+						</div>
+					  </div>
+					</div>
+			  </div>
+			  
+			  <div class="row">
+				<div class="container">
+					<div class="col-xs-2 col-sm-12 col-md-12 col-lg-12">
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h2 class="panel-title">Events</h2>
+						</div>
+						<div class="panel-body lead">
+						  <p>THERE ARE NO EVENTS AT THE MOMENTS</p>
+						</div>
+					  </div>
+					</div>
+				</div>
+			  </div><!--end of row-->
+			  
+			</div>
+		  <!-- /fourth section -->
+
+		  <!-- fifth section -->
+		  <div id="contact" class="pad-section">
+		  <div class="row">
+			<div class="container">
+				<div class="col-sm-12 col-md-12 col-lg-12 text-center">
+						<h2 class="text-center">Contact us</h2> <hr />
+					
+						  <div class="col-sm-4 col-md-4 col-lg-4 text-left">
+							<i class="glyphicon glyphicon-contact"> </i>
+							<h4>You can contact us on:</h4>
+
+							<p> NPO REG:180-544<br/>
+								PBO NUMBER:9273672239<br/>
+								CONTACTS:0814094176<br/>
+								EMAIL:thutokeyaronatutors@gmail.com
+							</p>
+						  </div>
+						  <div class="col-sm-4 col-md-4 col-lg-4 text-left">
+							  <i class="glyphicon glyphicon-contact"> </i>
+							<h4>Other contacts:</h4>
+							
+							<p> NPO REG:180-544<br/>
+							  PBO NUMBER:9273672239<br/>
+							  CONTACTS:0814094176<br/>
+							  EMAIL:thutokeyaronatutors@gmail.com
+						  </p>
+						  </div>
+				
+				  </div>
+				</div>
+			</div>
+		  </div>
+		  <!-- /fifth section -->
+		  
+		  <!-- footer -->
+			<div class="row"><div class="container">
+				<footer>
+					<hr />    
+					<p class="text-center">Copyright &copy; TKR Company 2019</p>
+				</footer>
+			</div></div>
+		  <!-- /footer -->
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fontawesome/js/all.js"></script>
+<script src="js/fontawesome/js/all.min.js"></script>
+<script src="js/fontawesome/js/brands.js"></script>
+<script src="js/fontawesome/js/brands.min.js"></script>
+<script src="js/fontawesome/js/fontawesome.js"></script>
+<script src="js/fontawesome/js/fontawesome.min.js"></script>
+<script src="js/fontawesome/js/regular.js"></script>
+<script src="js/fontawesome/js/regular.js"></script>
+<script src="js/men.js"></script>
+<script src="js/homepage_save.js"></script>
+
+</body>
+</html>

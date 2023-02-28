@@ -1,0 +1,182 @@
+<html>
+<head>
+
+    <!--The meta data of the application-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--The title of the forms-->
+        <title>Editor</title>
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!--Thuto normal style sheet-->
+        <link rel="stylesheet" type="text/css" href="css/thutoStyle.css">
+    
+        <!--Style sheets-->
+        <style>
+          .container{
+            background-image:url("images/x.jpg");
+			background-size:cover;
+			background-position:center;
+			background-repeat:no-repeat;
+			/*background-attachment:fixed;*/
+          }
+		  body{
+			 background-color: grey;
+		  }
+          .form-error{
+              color:red;
+          }
+
+          .input-error{
+              box-shadow: 0 0 15px red;
+          }
+
+          .form-success{
+              color:green;
+          }
+
+        </style>
+    
+</head>
+<body >
+<div class="row">
+<div class="container col-md-3 col-lg-2 col-xl-2">
+<button id="save" class="btn btn-danger">save</button>
+</div>
+<div id="page" class="col-md-9 col-lg-10 col-xl-10">
+  <div class="container-fluid" >
+    <div class="row">
+        <div class="col-md-12">
+            <h1></h1>
+
+            <div class="container">
+                <div class="row">
+                   <div class="col-md-6 offset-md-3">
+                            <form action="fetch.php" method="POST" class="form-horizontal form-center">
+                                    <div class="form-group">
+                                      <label>Name: </label>
+                                      <input type="text" class="form-control" id="applic-f_name" name="fname" placeholder="e.g: Musa">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Surname: </label>
+                                      <input type="text" class="form-control" id="applic-l_name" name="lname" placeholder="e.g: Mashele">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Country: </label>
+                                      <input type="text" class="form-control" id="applic-country" name="country" placeholder="e.g: South Africa">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Province: </label>
+                                      <input type="text" class="form-control" id="applic-prov" name="province" placeholder="e.g: Gauteng">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">City: </label>
+                                      <input type="text" class="form-control" id="applic-cit" name="city" placeholder="e.g: Pretoria">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Physical Address: </label>
+                                      <input type="text" class="form-control" id="applic-pAdd" name="Physical" placeholder="e.g: 878 block L Soshanguve">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Code: </label>
+                                      <input type="text" class="form-control" id="applic-cod" name="code" placeholder="e.g: 0152">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Email: </label>
+                                      <input type="email" class="form-control" id="applic-mail" name="email" placeholder="e.g: Musa.Mash01@gmail.com 'Optional...'">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Home Tel Number: </label>
+                                      <input type="text" class="form-control" id="applic-Tel" name="homeTel" placeholder="e.g: 012-999-3634 'Optional...'">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="group">
+                                      <label class="form-control-label">Phone Number: </label>
+                                      <input type="text" class="form-control" id="applic-phone_num" name="phoneN" placeholder="e.g: 079-586-4726">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                    <label class="form-control-label">Gender: </label>
+                                       <br>
+                                        <label class="form-check-label">
+                                            <input class="form-check-inline" checked="checked" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">Male
+                                        </label>
+                                        <br>
+                                        <label class="form-check-label">
+                                            <input  class="form-check-inline" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">Female
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Date of Birth: </label>
+                                      <input type="date" class="form-control" id="applic-DOB" name="date">
+                                      <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="formControlSelect1">Age: </label>
+                                      <select class="form-control" name="formControlSelect1" id="some_select"></select>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label">Do you suffer from medical condition: 
+                                          <br>
+                                          <label class="form-check-label">
+                                              <input class="form-check-inline" checked="checked" type="radio" id="inlineRadioB1" name="inlineRadioBOptions" value="yes">Yes
+                                          </label>
+                                          <br>
+                                          <label class="form-check-label">
+                                              <input class="form-check-inline" type="radio" id="inlineRadioB1" name="inlineRadioBOptions" value="no">No
+                                          </label>
+                                      </label>
+                                    </div>
+                                    <div class="form-group">  
+                                        <label class="control-label">If yes, please state your condition: </label>
+                                        <input type="text" class="form-control" id="applic-medCon" name="condition" placeholder="e.g: Short Eyesight">
+                                        <p class="form-message"></p>
+                                      </div>
+                                    <div class="form-group">  
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label"><p>
+                                            <input class="form-check-inline" type="checkbox" id="inlineCheckBox" name="inlineCheckBox" value="option1">I Parent/Guardian of the student stated in this application agree that he/she can attend the afternoon extra classes program and i take a full responsibility of everything that will be needed on behalf of my child, 
+                                                                                                                                                making sure that he/she attends the classes. 
+                                                                                                                                                I agree that it is in my best interest to work and support you to help my child in improving academically.</p> 
+                                            </label>
+                                       </div>
+                                       <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Date: </label>
+                                        <input type="date" class="form-control" id="applic-Date" name="date">
+                                      
+                                        <label class="control-label">Parent Initials: </label>
+                                        <input type="text" class="form-control" id="applic-init" name="initials" placeholder="e.g: P.M">
+                                        <p class="form-message"></p>
+                                      </div>
+                                    <div class="form-group">
+                                      <button class="btn btn-primary" type="submit" name="submit">Submit</button>   
+                                    </div>
+                                  </form>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/createFile.js"></script>
+</body>
+</html>
